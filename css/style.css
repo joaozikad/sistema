@@ -1,0 +1,179 @@
+body{
+	margin: 0;
+	background: black;
+}
+/* Topo do sistema*/
+#titulo{
+font-weight: 100px;
+	text-align:center;
+ 	text-transform: uppercase;
+    font-family: COURIER;
+	font-size: 44px;
+	color: white;
+	height: 150px;
+
+}
+#paginatopo{
+	background: black;
+	background-repeat: no-repeat;
+	background-size: 100%;
+background-attachment: fixed; 
+}
+.menu{
+	margin-left: 250px;
+	font-size: 24px;
+	list-style: none;
+	box-shadow: 2px 2px 2px #ffc;
+}
+.menu li{
+
+	background-color: #ccc;
+	border: 1px solid black;
+	position: relative;
+	float: left;
+	/*box-shadow: 2px 2px 2px #ffc;*/
+	width: 150px;
+
+}
+.menu li a{
+	padding: 10px;
+	color: Blue;
+	text-decoration: none;
+}
+.container{
+	
+	margin-top: 100px;
+	margin-left: 150px;
+	background-color: 	#9932CC;
+	height: 2000px;
+	width: 1006px;
+	position: absolute;
+}
+/* FORMULARIO E INPUTS */
+.formulario{
+	margin-top: 100px;
+	text-align: center;
+	font-family: Verdana;
+	font-size: 16px;
+	color: white;
+}
+input[type=text]{  
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid purple 1px; 
+	background-color: transparent;
+	color: white;
+	font-family: Verdana;
+	font-size: 16px;
+		width: 350px;
+	}
+input[type=text]:active, textarea:focus{ 
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid black 1px; 
+	background-color: transparent;
+	width: 350px;
+	text-decoration: none;
+	}
+	input[type=text]:focus, textarea:focus{ 
+
+outline: 0;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid black 1px; 
+	background-color: transparent;
+	width: 350px;
+	text-decoration: none;
+	}
+	input[type=email]{  
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid purple 1px; 
+	background-color: transparent;
+	color: white;
+	font-family: Verdana;
+	font-size: 16px;
+		width: 350px;
+	}
+		input[type=password]{  
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid purple 1px; 
+	background-color: transparent;
+	color: white;
+	font-family: Verdana;
+	font-size: 16px;
+		width: 350px;
+	}
+			input[type=submit]{  
+background-color: #7D26CD;
+height: 50px;
+width: 90px;
+color: white; 
+border: none;
+cursor: pointer;
+border-radius: 20px;
+}
+			input[type=submit]:hover{  
+background-color: #8B008B;
+height: 50px;
+width: 90px;
+color: white; 
+border: none;
+cursor: pointer;
+}
+			input[type=submit]:active{  
+background-color: red;
+height: 50px;
+width: 90px;
+color: white; 
+border: none;
+cursor: pointer;
+}
+/* TELA LOGIN*/
+input#telausuario{  
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid purple 1px; 
+	background-color: transparent;
+	border-color: red;
+	font-family: Verdana;
+	font-size: 16px;
+		width: 350px;
+	}
+	input#telausuario [type="password"]:focus{  
+		outline: none;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: solid purple 1px; 
+	background-color: transparent;
+	border-color: red;
+	font-family: Verdana;
+	font-size: 16px;
+		width: 350px;
+	}
+	/* tabela */
+	#tabela {
+  background:blue;
+}
+#tabela td{
+	background: white;
+}
+tr {
+    background-color: #edf5ff;
+}
+th:hover {
+  background-color:#3d80df;
+  color: #fff;
+}
+thead tr:hover {
+  background-color: transparent;
+  color: inherit;
+}
