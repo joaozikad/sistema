@@ -18,7 +18,7 @@
 <body>
 	<div class="container">
 		<div class="formulario" id="usuario">
-			<form action="php/cliente.php" method="POST">
+			<form action="php/cliente_PHP/clienteInserir.php" method="POST">
             <h2>Cadastrar Cliente</h2>
 <input type="text" name="nome" placeholder="Digite seu nome"><BR><br>
 <input type="email" placeholder="Digite seu email" required="@" name="email"><BR><br>
@@ -30,7 +30,7 @@
 
 $servidor = '127.0.0.1';
 $usuario = 'root';
-$senha = '';
+$senha = 'root';
 $banco = 'sistema';
 // Conecta-se ao banco de dados MySQL
 $link = new mysqli($servidor, $usuario, $senha, $banco);
@@ -61,58 +61,18 @@ if($result = mysqli_query($link, $sql)){
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
 ?>
-
-
 <BR><br>
 <input type="submit" Value="Enviar">
-
 </form>
-        </div>
-    <!-- deletar usuario -->
-    
-<form method="POST" action="php/excluir_cliente.php">
+    </div>
+    <!-- DELETAR CLIENTE -->
+<form method="POST" action="php/cliente_PHP/excluirCliente.php">
 <center>
-<h2>Excluir usuário.</h2><br> Digite o nome:
-<input type="text" name="nome_excluir">
+<h2>Excluir cliente.</h2><br> Digite o nome:
+<input type="text" name="nome">
 <input type="submit" value="Excluir">
-
-
-
-
-
-
-
-
-
-
 </center>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br>
 <br><br><br>
 
@@ -134,19 +94,12 @@ color: white;
 	}
 </style>
 <?php 
-$servidor = '127.0.0.1';
-$usuario = 'root';
-$senha = '';
-$banco = 'sistema';
+
 // Conecta-se ao banco de dados MySQL
-$link = new mysqli($servidor, $usuario, $senha, $banco);
 
-if (!$mysqli) {
-	# code...
+include("php/conecta.php");
 
-	
-}
-
+/// Chama dados
 $sql = "SELECT cliente.*, planos.preco
 FROM cliente
 INNER JOIN planos ON cliente.pacote = planos.nome;";
@@ -154,7 +107,6 @@ if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
         echo "<table >";
             echo "<tr class='fixo'>";
-               /// echo "<th class='fixo'>foto</th>";
                 echo "<th class='fixo'>COD</th>";
                 echo "<th class='fixo'>Nome</th>";
                 echo "<th class='fixo'>fone</th>";
@@ -166,7 +118,6 @@ if($result = mysqli_query($link, $sql)){
                 echo "</tr>";
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
-               /// echo "<td><image/" . $row['foto'] . ".jpg</td>";
                 echo "<td>" . $row['cod'] . "</td>";
                 echo "<td>" . $row['nome'] . "</td>";
                 echo "<td>" . $row['fone'] . "</td>";
@@ -178,7 +129,6 @@ if($result = mysqli_query($link, $sql)){
             echo "</tr>";
         }
         echo "</table>";
-        // Free result set
         mysqli_free_result($result);
     } else{
         echo "Sem usuários cadastrados.";
@@ -188,19 +138,7 @@ if($result = mysqli_query($link, $sql)){
 }
 ?>
 </center>
+    </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-	</div>
 </body>
 </html>

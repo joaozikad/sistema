@@ -2,14 +2,14 @@
 <?php
 $servidor = '127.0.0.1';
 $usuario = 'root';
-$senha = '';
+$senha = 'root';
 $banco = 'sistema';
 // Conecta-se ao banco de dados MySQL
-$mysqli = new mysqli($servidor, $usuario, $senha, $banco);
+$link = new mysqli($servidor, $usuario, $senha, $banco);
  
-if (!$mysqli) {
+if (!$link) {
   echo "error_log(message)";
 }
 
-mysqli_query($mysqli);
+mysqli_query($link);
 ?>

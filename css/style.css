@@ -49,6 +49,10 @@ background-attachment: fixed;
 	width: 1006px;
 	position: absolute;
 }
+a:visited{
+	background: white;
+
+}
 /* FORMULARIO E INPUTS */
 .formulario{
 	margin-top: 100px;

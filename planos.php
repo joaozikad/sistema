@@ -19,7 +19,7 @@
 <body>
 	<div class="container">
 
-<form method="POST" action="php/planosInserir.php">
+<form method="POST" action="php/planos_PHP/planosInserir.php">
 <center>
 <br><br><br><br>
 <h2>Cadastrar Plano</h2>
@@ -37,18 +37,13 @@
 <!--DELETAR PLANOS-->
 <center>
 <h2>Deletar Plano</h2>
-<form action="php/planos_excluir.php" method="POST">
+<form action="php/planos_PHP/planosExcluir.php" method="POST">
 	<input type="text" name="nome_plano" placeholder="Digite o código para excluir">
     <input type="submit">
 </form>
 </center>
-
 <!--TABELA DE PLANOS-->
-
-<br><br><br>
-<br><br><br>
-
-
+<br><br><br><br><br><br>
 <center>
 <style type="text/css">
 	.fixo th{
@@ -68,17 +63,10 @@ color: white;
 <?php 
 $servidor = '127.0.0.1';
 $usuario = 'root';
-$senha = '';
+$senha = 'root';
 $banco = 'sistema';
 // Conecta-se ao banco de dados MySQL
 $link = new mysqli($servidor, $usuario, $senha, $banco);
-
-if (!$mysqli) {
-	# code...
-
-	
-}
-
 $sql = "SELECT * FROM planos";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){

@@ -18,7 +18,7 @@
 <body>
 	<div class="container">
 		<div class="formulario" id="usuario">
-			<form action="php/usuario.php" method="POST">
+			<form action="php/usuario_PHP/.php" method="POST">
             <h2>Cadastrar Usuário</h2>
 <input type="text" name="nome" placeholder="Digite seu nome"><BR><br>
 <input type="email" placeholder="Digite seu email" required="@" name="email"><BR><br>
@@ -36,46 +36,9 @@
 <input type="text" name="nome_excluir">
 <input type="submit" value="Excluir">
 
-
-
-
-
-
-
-
-
-
 </center>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br>
-<br><br><br>
-
+<br><br><br><br><br><br>
 
 <center>
 <style type="text/css">
@@ -96,16 +59,10 @@ color: white;
 <?php 
 $servidor = '127.0.0.1';
 $usuario = 'root';
-$senha = '';
+$senha = 'root';
 $banco = 'sistema';
 // Conecta-se ao banco de dados MySQL
 $link = new mysqli($servidor, $usuario, $senha, $banco);
-
-if (!$mysqli) {
-	# code...
-
-	
-}
 
 $sql = "SELECT * FROM usuario";
 if($result = mysqli_query($link, $sql)){
@@ -138,7 +95,8 @@ if($result = mysqli_query($link, $sql)){
 }
 ?>
 </center>
-</div>
+    </div>
+</div
 
 
 
@@ -149,8 +107,6 @@ if($result = mysqli_query($link, $sql)){
 
 
 
-
-
-	</div>
+>
 </body>
 </html>
